@@ -1,0 +1,39 @@
+/*
+etiquetas <--orden alfabetico
+identificadores
+clases
+pseudoelementos
+*/
+
+main {
+    background-color: rgba(255,255,255,0.5);
+    width: 30%;
+    padding: 30px;
+    border-radius: 30px;
+    left: 34%;
+    top:20%;
+    position: absolute;
+}
+
+body {
+    font-family: verdana;
+    background-attachment: fixed;
+}
+nav {
+    background-color: rgba(255,255,255,0.5);
+    width: 9%;
+    padding: 7px;
+    border-radius: 20px;
+    border-color: white;
+    border-width: 1px;
+    border-style: solid;
+    position: absolute;
+    left: 15%;
+    top: 35%;
+}
+h1 {
+    position: relative;
+    left: 45%;
+    font-family: cursive;
+    color: white;
+}
