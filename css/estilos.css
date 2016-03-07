@@ -26,6 +26,11 @@ main {
     padding: 30px;
 }
 
+input[type=submit]{
+    background-color: white;
+    border-color: azure;
+}
+
 body {
     background-size:cover;
     font-family: verdana;
