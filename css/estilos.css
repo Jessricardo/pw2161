@@ -26,14 +26,10 @@ main {
     padding: 30px;
 }
 
-input[type=submit]{
-    background-color: white;
-    border-color: azure;
-}
 
 body {
     background-size:cover;
-    font-family: verdana;
+    font-family: "Quicksand", sans-serif;
 }
 nav {
     background-color: rgba(255,255,255,0.5);
@@ -47,7 +43,7 @@ nav {
 }
 header h1 {
     color: white;
-    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-family: "Orbitron", sans-serif;
     margin:auto; 
     margin-bottom: 30px;
     text-shadow:3px 3px 15px black;
@@ -55,6 +51,7 @@ header h1 {
 footer{
     padding: 30px;
     text-align: center;
+    font-family: "Cabin", sans-serif;
 }
 header nav ul li{
     border: 1px solid black;
@@ -69,6 +66,7 @@ header nav ul li{
     font-size: 15px;
     box-shadow:1px 2px 10px black;
     transition: background-color 0.2s linear;
+    font-family: "Maven Pro", sans-serif;
     }
 header nav ul{ 
     text-align: center;
@@ -100,5 +98,5 @@ header img {
     display: inline-block;
     vertical-align: middle;
     width:47.8%;
-
+    font-family: "Muli", sans-serif;
 }
