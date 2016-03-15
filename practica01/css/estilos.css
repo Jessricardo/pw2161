@@ -44,7 +44,34 @@ form input[type="button"]
 	text-align: center;
 }
 #seccion01 article img{
-	width:98%;
 	border: 5px solid rgba(150,150,150,0.5);
 	margin-top: 15px;
+	width:98%;
+}
+#seccion02 article
+{
+	text-align: left;
+	display:inline-block;
+	vertical-align: top;
+	width:33%;
+}
+#seccion02 input[type="button"]
+{
+	background: white;
+	border-radius: 2px;
+	border:1px solid gray;
+	color:blue;
+	margin-left: 40%;
+}
+.unaSeccion,.otraSeccion
+{
+	font-weight: bold;
+}
+.unaSeccion
+{
+	font-size: 4.5em;
+}
+.otraSeccion
+{
+	font-size: 2.5em;
 }
