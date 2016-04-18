@@ -1,0 +1,35 @@
+body {
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: center;
+}
+header {
+    margin-top: 14%;
+    font-size: 3em;
+    font-family: sans-serif;
+    margin-bottom: 3%;
+}
+table{
+	border-collapse: collapse;
+	margin: 0 auto;
+}
+td{
+	width: 200px;
+    height: 200px;
+}
+.bottomright{
+	border-bottom: 5px solid red;
+    border-right: 5px solid red;
+}
+#td13 {
+    border-bottom: 5px solid red;
+}
+#td23 {
+    border-bottom: 5px solid red;
+}
+#td31{
+	border-right: 5px solid red;
+}
+#td32{
+	border-right: 5px solid red;
+}
