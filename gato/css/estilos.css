@@ -16,6 +16,7 @@ table{
 td{
 	width: 200px;
     height: 200px;
+    font-size: 11em;
 }
 .bottomright{
 	border-bottom: 5px solid red;
