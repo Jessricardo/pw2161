@@ -2,6 +2,7 @@ body {
     max-width: 1024px;
     margin: 0 auto;
     text-align: center;
+    background-size: cover;
 }
 header {
     margin-top: 14%;
@@ -21,6 +22,18 @@ td{
 .bottomright{
 	border-bottom: 5px solid red;
     border-right: 5px solid red;
+}
+#scoreboard {
+    display: inline-block;
+    background-color: white;
+    vertical-align: top;
+    margin-top: -48%;
+    margin-left: -127%;
+    font-size: 4em;
+    border-radius: 15px;
+    padding: 9% 23% 9% 10%;
+    box-shadow: 12px 9px 44px -14px black;
+    color: #0B4B84;
 }
 #td13 {
     border-bottom: 5px solid red;

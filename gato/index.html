@@ -6,7 +6,7 @@
 	<link rel="stylesheet" href="css/estilos.css">
 	<script src="js/gato.js"></script>
 </head>
-<body>
+<body background="img/fondo.jpg" onload="actualizar();">
 	<header>Juego del Gato(#<span id="titulo"></div></header>
 	<table>
 		<tr>
@@ -25,5 +25,9 @@
 			<td onClick="clic(this.id);" id="td33">&nbsp;</td>
 		</tr>
 	</table>
+	<section id="scoreboard">
+		X=<span id="ganadosX"></span><br>
+		O=<span id="ganadosO"></span>
+	</section>
 </body>
 </html>
