@@ -7,7 +7,22 @@ var cuentaJugadas=0;
 
 function iniciaGato()
 {
-	//En construcción
+	//Preguntar si el navegador es compatible con localStorage
+	if(typeof(Storage) != "undefined")
+	{
+		if(localStorage.webCuentaJuego){
+			cuentaJuego=localStorage.webCuentaJuego;
+			cuentaJuego++;
+		}
+		else
+		{
+			cuentaJuego=1;
+		}
+		document.getElementById("tituloJuego").innerHTML="Juego del Gato (#"+cuentaJuego+")";
+	}
+	else{
+		alert("¡Actualiza tu navegador!");
+	}
 }
 function validaJugada(letra){
 	var ganador = false;
@@ -34,7 +49,7 @@ function validaJugada(letra){
 	if(b11==b21 && b21==b31 && b11!="&nbsp;"){
 		ganador=true;
 	}
-	if(b11==b22 && b22==b32 && b12!="&nbsp;"){
+	if(b12==b22 && b22==b32 && b12!="&nbsp;"){
 		ganador=true;
 	}
 	if(b13==b23 && b23==b33 && b13!="&nbsp;"){
@@ -50,22 +65,26 @@ function validaJugada(letra){
 	//¿Alguien ganó?
 	if(ganador){
 		alert("Ganador: "+letra);
+		localStorage.webCuentaJuego=cuentaJuego;
 	}else if(ganador==false && cuentaJugadas==9){
 		alert("¡Empate!");
 	}
+}
+function reiniciar(){
+	localStorage.removeItem("webCuentaJuego");
 }
 function escribe(casilla)
 {
 	var letra= "";
 	letraCasilla=document.getElementById(casilla).innerHTML;
-	if(letraCasilla!="X" && letraCasilla!="O"){
+	if(letraCasilla !="X" && letraCasilla !="O"){
 		if(turno==false){ // if(!turno)
 			letra="X";
 		}else{
 			letra="O";
-			document.getElementById(casilla).innerHTML=letra;
-			turno=!turno; // turno=true;
 		}
+		document.getElementById(casilla).innerHTML=letra;
+		turno=!turno; // turno=true;
 	}
 	cuentaJugadas=cuentaJugadas+1;
 	//Para saber quien ganó, validamos la jugada
