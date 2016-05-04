@@ -1,0 +1,42 @@
+article {
+    margin-top: 20%;
+    padding: 3%;
+    background-color: rgba(0, 0, 0, 0.32);
+    border-radius: 10px;
+    width: 31%;
+    display: inline-block;
+    box-shadow: 1px 2px 24px;
+}
+body{
+	margin:0 auto;
+	font-size: 16px;
+	max-width: 1024px;
+	text-align: center;
+	background-size: cover;
+}
+#fotoPersona {
+    border-radius: 50%;
+    border: 2px solid white;
+    box-shadow: 2px 3px 16px;
+    margin-bottom: 5%;
+}
+#txtNombreUser {
+    color: white;
+    font-size: 3em;
+    font-family: cursive;
+}
+#txtApellidoUser {
+    color: white;
+    font-family: fantasy;
+    font-size: 1.5em;
+}
+#miBoton {
+    background-color: #2196F3;
+    border: none;
+    color: white;
+    margin-top: 6%;
+    padding: 3% 40%;
+    font-size: 0.8em;
+    border-radius: 3px;
+    box-shadow: 1px 2px 11px -2px black;
+}
