@@ -16,6 +16,10 @@ var inicio=function(){
         				$("#heroPicture").load(function () {
            					$("#heroName").text(resultado1.data.results[0].name);
                     $("#heroDescription").text(resultado1.data.results[0].description);  
+                    for(i=0;i<resultado1.data.results[0].comics.items.length;i++){
+                      $("#heroComics").append("-"+resultado1.data.results[0].comics.items[i].name+"<br>");
+                    }
+                    $("#heroComicsTitle").show("blind",700);
                     $("table").show("blind",700,function(){
                       if(resultado1.data.results.length > 1){
                         $("#caja").show("blind",700);
@@ -45,7 +49,11 @@ var inicio=function(){
       pagina++;
       $("table").hide("slide", { direction: "left" }, 300,function(){
         $("#heroName").text(resultado.data.results[pagina].name);
-        $("#heroDescription").text(resultado.data.results[pagina].description);  
+        $("#heroDescription").text(resultado.data.results[pagina].description); 
+        $("#heroComics").empty();
+        for(i=0;i<resultado1.data.results[0].comics.items.length;i++){
+          $("#heroComics").append("-"+resultado1.data.results[0].comics.items[i].name+"<br>");
+        }  
       }).show("slide", { direction: "right" }, 300);
       $("#heroPicture").attr("src", resultado.data.results[pagina].thumbnail.path+"."+resultado.data.results[pagina].thumbnail.extension);
       
@@ -56,7 +64,11 @@ var inicio=function(){
       pagina--;
       $("table").hide("slide", { direction: "right" }, 300,function(){
         $("#heroName").text(resultado.data.results[pagina].name);
-        $("#heroDescription").text(resultado.data.results[pagina].description); 
+        $("#heroDescription").text(resultado.data.results[pagina].description);
+        $("#heroComics").empty();
+        for(i=0;i<resultado1.data.results[0].comics.items.length;i++){
+          $("#heroComics").append("-"+resultado1.data.results[0].comics.items[i].name+"<br>");
+        } 
       }).show("slide", { direction: "left" }, 300);
       $("#heroPicture").attr("src", resultado.data.results[pagina].thumbnail.path+"."+resultado.data.results[pagina].thumbnail.extension);      
     }
@@ -74,5 +86,8 @@ var inicio=function(){
 	$("#heroButton").on("click",searchHero);
   $("#siguiente").on("click",siguienteHero);
   $("#anterior").on("click",anteriorHero);
+  $("#heroComicsTitle").on("click",function(){
+    $("#heroComics").toggle("blind",700);
+  })
 }
 $(document).on("ready",inicio);
