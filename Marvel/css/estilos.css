@@ -97,6 +97,26 @@ tr {
 #heroButton:hover {
     background-color: #4178D4;
 }
+#heroComics {
+    display: none;
+    text-align: left;
+    margin-top: 2%;
+    font-size: 0.9em;
+    border: 1px solid white;
+    padding: 3%;
+    border-radius: 16px;
+}
+#heroComicsTitle {
+    padding: 1% 4%;
+    color: whitesmoke;
+    text-align: center;
+    font-family: "Lucida Sans Unicode";
+    display: inline-block;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 0.7em;
+    display: none;
+}
 #heroName {
     font-size: 2em;
     font-weight: bold;
