@@ -1,0 +1,10 @@
+body {
+    margin: 0 auto;
+    max-width: 1024px;
+    text-align: center;
+    font-size: 16px;
+}
+header {
+    display: inline-block;
+    margin-top: 2%;
+}

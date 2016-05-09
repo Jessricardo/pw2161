@@ -29,17 +29,16 @@ tr {
 {
     border: none;
     border-radius: 50%;
-    font-size: 1.5em;
+    font-size: 1.9em;
     padding-bottom: 2%;
-    padding-right: 3%;
-    padding-left: 2.7%;
+    padding-right: 5%;
+    padding-left: 5%;
     padding-top: 1%;
     color: white;
-    font-weight: bold;
     box-shadow: 0.5px 2px 4px -2px black;
     background-color: #009688;
     cursor: pointer;
-    margin-bottom: -12%;
+    margin-bottom: -13%;
     vertical-align: bottom;
     transition: .3s;
 }
@@ -76,6 +75,7 @@ tr {
     transition:.3s;
     background-color: rgba(255, 255, 255, 0.5);
 	border: none;
+    font-size: 1em;
 }
 #heroSearch:hover,#heroSearch:focus{
 	box-shadow: 0px 1px 7px -2px black;
@@ -88,11 +88,11 @@ tr {
     padding: 2%;
     color: white;
     font-family: Helvetica;
-    font-weight: bold;
     box-shadow: 1px 1px 6px -2px black;
     transition: .3s;
     cursor: pointer;
     margin-bottom: 2%;
+    font-size: 0.8em;
 }
 #heroButton:hover {
     background-color: #4178D4;

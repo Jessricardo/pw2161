@@ -28,7 +28,7 @@ var inicio=function()
   			$("#fotoPersona").fadeOut();
   			$("#fotoPersona").fadeIn();
   			$("#fotoPersona").attr("src",data.results[0].picture.large);
-  			$("#txtNombreUser").slideDown("slow");
+  			$("#txtNombreUser").fadeIn();
   			$("#txtNombreUser").html(data.results[0].name.first);
   			$("#txtApellidoUser").html(data.results[0].name.last);
   			},
