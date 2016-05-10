@@ -3,8 +3,20 @@ body {
     max-width: 1024px;
     text-align: center;
     font-size: 16px;
+    color:white;
 }
 header {
     display: inline-block;
     margin-top: 2%;
+}
+header nav{
+	text-align: center;
+	display: none;
+}
+header nav ul li{
+	display: inline-block;
+}
+#datosUsuario{
+	width:320px;
+	margin:0 auto;
 }
