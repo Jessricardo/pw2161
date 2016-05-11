@@ -3,7 +3,8 @@ body {
     max-width: 1024px;
     text-align: center;
     font-size: 16px;
-    color:white;
+    background-color: #316B94;
+    color: white;
 }
 header {
     display: inline-block;
@@ -15,6 +16,10 @@ header nav{
 }
 header nav ul li{
 	display: inline-block;
+    width: 
+}
+header nav ul li button{
+    width: 89px;
 }
 #datosUsuario{
 	width:320px;
