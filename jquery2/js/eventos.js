@@ -14,7 +14,7 @@ var iniciaApp=function()
 		//2.- Verificar usuario y contraseña
 		var parametros = "accion=validaEntrada"+
 						 "&usuario="+usuario+
-						 "&clave="+clave
+						 "&clave="+clave+
 						 "&id="+Math.random();
 		$.ajax({
 			beforeSend:function(){
@@ -28,6 +28,7 @@ var iniciaApp=function()
 			success:function(response){
 				if(response.respuesta){
 					$("#datosUsuario").slideUp("slow");
+					$("header").slideDown("slow");
 					$("nav").slideDown("slow");
 				}else{
 					alert("Usuario/contraseña incorrecto(s)");

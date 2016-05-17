@@ -29,21 +29,21 @@ function GetSQLValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
 function validaEntrada()
 {
 	$usuario=GetSQLValueString($_POST["usuario"],"text");
-	$clave=md5(GetSQLValueString($_POST["clave"],"text"));
+	$clave=GetSQLValueString(md5($_POST["clave"]),"text");
 	$respuesta=false;
 	//Conecto al servidor de BD
 	//Servidor, usuario, clave
 	$conexion =mysql_connect("localhost","root","");
 	//Seleccionar la BD
 	mysql_select_db("cursopw");
-	$validar = sprintf("Select usuario, clave from usuarios where usuario=%s and clave=%d limit 1",$usuario,$clave);
+	$validar = sprintf("select usuario, clave from usuarios where usuario=%s and clave=%s limit 1",$usuario,$clave);
 	$resultado=mysql_query($validar);
 	//Preguntamos si se trajo un registro
 	if(mysql_num_rows($resultado)>0)
 	{
 		$respuesta=true;		
 	}
-	$salidaJSON = array('$respuesta' => $respuesta);
+	$salidaJSON = array('respuesta' => $respuesta);
 	//Devolvemos el resultado al JS
 	print json_encode($salidaJSON);
 }

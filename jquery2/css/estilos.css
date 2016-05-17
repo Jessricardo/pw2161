@@ -5,10 +5,15 @@ body {
     font-size: 16px;
     background-color: #316B94;
     color: white;
+    background-size: cover;
 }
 header {
-    display: inline-block;
-    margin-top: 2%;
+    display: none;
+    background-color: rgba(0,0,0,0.5);
+    padding-right: 4%;
+    padding-bottom: 1%;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 3px 3px 13px -1px black;
 }
 header nav{
 	text-align: center;
@@ -24,4 +29,9 @@ header nav ul li button{
 #datosUsuario{
 	width:320px;
 	margin:0 auto;
+    margin-top: 9%;
+}
+#altaUsuarios{
+    margin: 0 auto;
+    width: 31%;
 }

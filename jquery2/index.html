@@ -8,7 +8,7 @@
 	<script src="js/jquery-2.2.3.js"></script>
 	<script src="js/eventos.js"></script>
 </head>
-<body>
+<body background="img/fondo.jpg">
 	<header>
 		<h1>Sistema de Ejemplo</h1>
 		<nav>
@@ -37,6 +37,21 @@
     					</form>
   					</article>
 				</article>
+			</article>
+		</section>
+		<section>
+			<article id="altaUsuarios">
+				<h2>Alta de Usuarios</h2>
+				<form action="#" id="frmAltaUsuarios" name="frmAltaUsuarios">
+					<input type="text" class="form-control" name="txtNombreUsuario" required id="txtNombreUsuario" placeholder="Usuario">
+					<input type="password" class="form-control" name="txtClaveUsuario" id="txtClaveUsuario" required placeholder="Clave">
+					<select name="txtTipoUsuario" id="txtTipoUsuario" class="form-control">
+						<option value="vigente">Vigente</option>
+						<option value="baja">Baja</option>
+					</select>
+					<input type="text" class="form-control" id="txtDepartamento" name="txtDepartamento" placeholder="Departamento">
+					<input type="submit" id="btnAltaUsuario" name="btnAltaUsuario" class="btn btn-success btn-lg btn-block">
+				</form>
 			</article>
 		</section>
 	</main>
