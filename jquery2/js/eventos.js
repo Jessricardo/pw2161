@@ -110,11 +110,37 @@ var iniciaApp=function()
 			}
 		});
 	}
-	
+	var Consultas = function()
+	{
+		var parametros = "accion=consultas"+
+						 "&id="+Math.random();
+		$.ajax({
+			beforeSend:function(){
+				console.log("Consultas usuarios");
+			},
+			cache:false,
+			type:"POST",
+			dataType:"json",
+			url:"php/funciones.php",
+			data:parametros,
+			success:function(response){
+				if(response.respuesta){
+					$("#tablaConsultas").html(response.tabla);
+					$("#consultasUsuarios").slideDown("slow");
+				}else{
+					alert("Mal");
+				}
+			},
+			error:function(xhr,ajaxOptions,thrownError){
+				console.log("Algo salió mal");
+			}
+		});
+	}
 	//Eventos
 	$("#frmValidaEntrada").on("submit",validarEntrada);
 	$("#btnAltas").on("click",Altas);
 	$("#frmAltaUsuarios").on("submit",AltaUsuario);
 	$("#btnBajas").on("click",Bajas);
+	$("#btnConsultas").on("click",Consultas);
 }
 $(document).on("ready",iniciaApp);

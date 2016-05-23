@@ -68,7 +68,8 @@ function guardaUsuario()
 	//Devolvemos el resultado al JS
 	print json_encode($salidaJSON);
 }
-function bajaUsuario(){
+function bajaUsuario()
+{
 	$respuesta=false;
 	$usuario =GetSQLValueString($_POST["txtNombreUsuario"],"text");
 	mysql_connect("localhost","root","");
@@ -84,6 +85,29 @@ function bajaUsuario(){
 	print json_encode($salidaJSON);
 
 }
+function consultas()
+{
+	$respuesta=false;
+	mysql_connect("localhost","root","");
+	mysql_select_db("cursopw");
+	$consulta="select * from usuarios";
+	$resultado=mysql_query($consulta);
+	if(mysql_num_rows($resultado)>0)
+	{
+		$respuesta=true;
+		$tabla="<tr><th>Usuario</th><th>Tipo Usuario</th><th>Departamento</th></tr>";
+		while($registro=mysql_fetch_array($resultado))
+		{
+			$tabla.="<tr>";
+			$tabla.="<td>".$registro["usuario"]."</td>";
+			$tabla.="<td>".$registro["tipousuario"]."</td>";
+			$tabla.="<td>".$registro["departamento"]."</td>";
+			$tabla.="</tr>";
+		}
+	}
+	$salidaJSON= array('respuesta' => $respuesta, 'tabla' => $tabla);
+	print json_encode($salidaJSON);
+}
 
 $accion = $_POST["accion"];
 //Menu principal
@@ -96,6 +120,9 @@ switch ($accion) {
 	break;
 	case 'bajaUsuario':
 		bajaUsuario();
+	break;
+	case 'consultas':
+		consultas();
 	break;
 	default:
 		# code...

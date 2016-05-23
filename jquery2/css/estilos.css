@@ -30,9 +30,13 @@ header nav ul li{
 header nav ul li button{
     width: 89px;
 }
-#altaUsuarios{
+table{
+    background-color: #DADADA;
+    color: black;
+}
+#altaUsuarios,#consultasUsuarios{
     display: none;
-    margin: 0 auto;
+    margin: 5% auto;
     width: 31%;
 }
 #datosUsuario{
@@ -40,3 +44,4 @@ header nav ul li button{
 	margin:0 auto;
     margin-top: 9%;
 }
+
