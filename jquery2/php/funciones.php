@@ -95,13 +95,14 @@ function consultas()
 	if(mysql_num_rows($resultado)>0)
 	{
 		$respuesta=true;
-		$tabla="<tr><th>Usuario</th><th>Tipo Usuario</th><th>Departamento</th></tr>";
+		$tabla="<tr><th>Usuario</th><th>Tipo Usuario</th><th>Departamento</th><th>Acciones</th></tr>";
 		while($registro=mysql_fetch_array($resultado))
 		{
 			$tabla.="<tr>";
 			$tabla.="<td>".$registro["usuario"]."</td>";
 			$tabla.="<td>".$registro["tipousuario"]."</td>";
 			$tabla.="<td>".$registro["departamento"]."</td>";
+			$tabla.="<td><button id='".$registro["usuario"]."' class='btn btn-danger'>Baja</button></td>";
 			$tabla.="</tr>";
 		}
 	}

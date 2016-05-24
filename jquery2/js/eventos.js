@@ -136,11 +136,44 @@ var iniciaApp=function()
 			}
 		});
 	}
+	var BajaDinamica=function()
+	{
+		var usuario="txtNombreUsuario="+$(this).attr("id");
+		var parametros = "accion=bajaUsuario&"+usuario+
+						 "&id="+Math.random();
+		$.ajax({
+			beforeSend:function(){
+				console.log("Consultas usuarios");
+			},
+			cache:false,
+			type:"POST",
+			dataType:"json",
+			url:"php/funciones.php",
+			data:parametros,
+			success:function(response){
+				if(response.respuesta){
+					Consultas();
+				}else{
+					alert("Mal");
+				}
+			},
+			error:function(xhr,ajaxOptions,thrownError){
+				console.log("Algo salió mal");
+			}
+		});
+
+	}
+
 	//Eventos
 	$("#frmValidaEntrada").on("submit",validarEntrada);
 	$("#btnAltas").on("click",Altas);
 	$("#frmAltaUsuarios").on("submit",AltaUsuario);
 	$("#btnBajas").on("click",Bajas);
 	$("#btnConsultas").on("click",Consultas);
+	//Eventos dinámicos
+	$("#tablaConsultas").on("click","button",BajaDinamica);
+	//Otra forma
+	//$("#tablaConsultas > input").on("click",BajaDinamica);
+
 }
 $(document).on("ready",iniciaApp);

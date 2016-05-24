@@ -33,11 +33,12 @@ header nav ul li button{
 table{
     background-color: #DADADA;
     color: black;
+    box-shadow: 0px 6px 21px 2px rgba(0,0,0,0.51);
 }
 #altaUsuarios,#consultasUsuarios{
     display: none;
     margin: 5% auto;
-    width: 31%;
+    width: 40%;
 }
 #datosUsuario{
 	width:320px;
